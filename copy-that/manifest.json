@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Copy That!",
+  "version": "1.0",
+  "description": "Allows copying text on sites where Ctrl + C is disabled.",
+  "permissions": ["activeTab", "scripting"],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Copy That!"
+  }
+}
